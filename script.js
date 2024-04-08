@@ -255,7 +255,7 @@ const createWeatherElement = (weatherData) => {
 
 
 const getWeatherDetails = (location) => {
-    const API_URL = `http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${location}&days=3&aqi=yes&alerts=no`;
+    const API_URL = `https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${location}&days=3&aqi=yes&alerts=no`;
     console.log(API_URL);
     fetch(API_URL)
         .then((response) => response.json())
