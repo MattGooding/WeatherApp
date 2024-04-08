@@ -4,7 +4,7 @@ const locationButton = document.querySelector(".location-btn");
 const currentWeatherDiv = document.querySelector(".current-weather");
 const weatherCardsDiv = document.querySelector(".weather-cards");
 
-const API_KEY = "381ac6ed30fd4d6c878191518240803"; // API key for OpenWeatherMap API
+const API_KEY = "381ac6ed30fd4d6c878191518240803";
 
 const createWeatherElement = (weatherData) => {
     // Function to format time
@@ -256,11 +256,11 @@ const createWeatherElement = (weatherData) => {
 
 const getWeatherDetails = (location) => {
     const API_URL = `https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${location}&days=3&aqi=yes&alerts=no`;
+
     console.log(API_URL);
     fetch(API_URL)
         .then((response) => response.json())
         .then((data) => {
-            console.log(data);
             createWeatherElement(data);
         })
         .catch(() => {
